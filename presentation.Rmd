@@ -1,0 +1,57 @@
+---
+title: "Iris: Sepal-Ratio Modeling"
+author: "Bastiaan Quast"
+date: "Thursday, July 18, 2014"
+output:
+  ioslides_presentation:
+    transition: faster
+runtime: shiny
+---
+
+
+# We want to model sepal ratios, do we need separate models for each species?
+
+
+## Iris dataset
+
+- Included in R package **datasets**
+- Originally by Fisher or Anderson
+- Measurements for **petal** and **sepal** width and length
+- Fifty flowers of three species
+    - Setosa
+    - Versicolor
+    - Virginica
+
+
+## LOESS Model
+
+ - **Lo**cally W**e**ighted **S**catterplot **S**moothing
+    - [more info on LOESS](http://en.wikipedia.org/wiki/Local_regression)
+ - General model and species-specific models
+    - Standard Error bands
+    - Grey band for general model
+    - Coloured bands for respective species
+ - Adjustable 'wobblyness' of models
+ - Adjustable point size and opacity
+
+
+## Results
+```{r echo=FALSE, message=FALSE}
+library(knitr)
+library(ggvis)
+library(shiny)
+library(dplyr)
+```
+
+```{r, echo = FALSE, message = FALSE, fig.width = 6, fig.height = 4}
+iris %>%
+  ggvis(~Sepal.Width, ~Sepal.Length) %>%
+  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'General Model'), se = TRUE) %>%
+  group_by(Species) %>%
+  layer_points(size := input_slider(10, 1000, 100, label = 'Point Size'), opacity := input_slider(0.5, 1, 0.5, label = 'Point Opacity'), fill = ~Species) %>%
+  layer_smooths(span = input_slider(10, 1000, 100, label = 'Species Models'), fill = ~Species, se=TRUE) %>%
+  add_axis("x", title = "Sepal Width") %>%
+  add_axis("y", title = "Sepal Length") %>%
+  bind_shiny("ggvis", "ggvis_ui"
+             )
+```
