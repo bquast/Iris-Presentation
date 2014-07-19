@@ -17,6 +17,20 @@ Thursday, July 18, 2014
     - Virginica
 
 
+```r
+str(iris)
+```
+
+```
+## 'data.frame':	150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+```
+
+
 ## LOESS Model
 
  - **Lo**cally W**e**ighted **S**catterplot **S**moothing
@@ -31,27 +45,27 @@ Thursday, July 18, 2014
 
 ## Results
 
-<!--html_preserve--><div id="plot_id915866840-container" class="ggvis-output-container">
-<div id="plot_id915866840" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id690276936-container" class="ggvis-output-container">
+<div id="plot_id690276936" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id915866840_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id915866840" data-renderer="svg">SVG</a>
+<a id="plot_id690276936_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id690276936" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id915866840_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id915866840" data-renderer="canvas">Canvas</a>
+<a id="plot_id690276936_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id690276936" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id915866840_download" class="ggvis-download" data-plot-id="plot_id915866840">Download</a>
+<a id="plot_id690276936_download" class="ggvis-download" data-plot-id="plot_id690276936">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id915866840_spec = {
+var plot_id690276936_spec = {
 	"data" : [
 		{
 			"name" : "iris0/regroup2_flat",
@@ -405,7 +419,7 @@ var plot_id915866840_spec = {
 	},
 	"handlers" : null
 };
-ggvis.getPlot("plot_id915866840").parseSpec(plot_id915866840_spec);
+ggvis.getPlot("plot_id690276936").parseSpec(plot_id690276936_spec);
 </script><!--/html_preserve-->
 An interactive version of this plot is available here:
 
