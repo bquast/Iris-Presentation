@@ -23,6 +23,10 @@ runtime: shiny
     - Versicolor
     - Virginica
 
+```{r}
+str(iris)
+```
+
 
 ## LOESS Model
 
