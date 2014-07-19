@@ -22,6 +22,10 @@ output:
     - Versicolor
     - Virginica
 
+```{r}
+str(iris)
+```
+
 
 ## LOESS Model
 
