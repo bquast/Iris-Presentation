@@ -45,27 +45,27 @@ str(iris)
 
 ## Results
 
-<!--html_preserve--><div id="plot_id690276936-container" class="ggvis-output-container">
-<div id="plot_id690276936" class="ggvis-output"></div>
+<!--html_preserve--><div id="plot_id922804219-container" class="ggvis-output-container">
+<div id="plot_id922804219" class="ggvis-output"></div>
 <div class="plot-gear-icon">
 <nav class="ggvis-control">
 <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
 <ul class="ggvis-dropdown">
 <li>
 Renderer: 
-<a id="plot_id690276936_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id690276936" data-renderer="svg">SVG</a>
+<a id="plot_id922804219_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id922804219" data-renderer="svg">SVG</a>
  | 
-<a id="plot_id690276936_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id690276936" data-renderer="canvas">Canvas</a>
+<a id="plot_id922804219_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_id922804219" data-renderer="canvas">Canvas</a>
 </li>
 <li>
-<a id="plot_id690276936_download" class="ggvis-download" data-plot-id="plot_id690276936">Download</a>
+<a id="plot_id922804219_download" class="ggvis-download" data-plot-id="plot_id922804219">Download</a>
 </li>
 </ul>
 </nav>
 </div>
 </div>
 <script type="text/javascript">
-var plot_id690276936_spec = {
+var plot_id922804219_spec = {
 	"data" : [
 		{
 			"name" : "iris0/regroup2_flat",
@@ -419,8 +419,8 @@ var plot_id690276936_spec = {
 	},
 	"handlers" : null
 };
-ggvis.getPlot("plot_id690276936").parseSpec(plot_id690276936_spec);
+ggvis.getPlot("plot_id922804219").parseSpec(plot_id922804219_spec);
 </script><!--/html_preserve-->
 An interactive version of this plot is available here:
 
-https://bquast.shinyapps.io/Iris-Presentation/presentation.Rmd
+https://bquast.shinyapps.io/Iris-Presentation

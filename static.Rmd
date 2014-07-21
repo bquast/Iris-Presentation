@@ -54,4 +54,4 @@ iris %>%
 ```
 An interactive version of this plot is available here:
 
-https://bquast.shinyapps.io/Iris-Presentation/presentation.Rmd
+https://bquast.shinyapps.io/Iris-Presentation
