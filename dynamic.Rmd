@@ -42,21 +42,36 @@ str(iris)
 
 ## Results
 ```{r echo=FALSE, message=FALSE}
-library(knitr)
+# load the ggvis package
 library(ggvis)
-library(shiny)
-library(dplyr)
-```
 
-```{r, echo = FALSE, message = FALSE, fig.width = 6, fig.height = 4}
+# load the dplyr package
+# for use of magrittr pipe: %>%
+library(dplyr)
+
+# lazyload the dataset and pass it to
 iris %>%
+  # the ggvis function, now set the axis
   ggvis(~Sepal.Width, ~Sepal.Length) %>%
-  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'General Model'), se = TRUE) %>%
+  # add the smoother for all points
+  layer_smooths(span = input_slider(0.5, 1, 0.5,
+                                    label = 'General Model'),
+                se = TRUE) %>%
+  # now group by species
   group_by(Species) %>%
-  layer_points(size := input_slider(10, 200, 50, label = 'Point Size'), opacity := input_slider(0.5, 1, 0.5, label = 'Point Opacity'), fill = ~Species) %>%
-  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'Species Models'), fill = ~Species, se=TRUE) %>%
+  # add points per species and colour them
+  layer_points(size := input_slider(10, 200, 50,
+                                    label = 'Point Size'),
+               opacity := input_slider(0.5, 1, 0.5,
+                                       label = 'Point Opacity'),
+               fill = ~Species) %>%
+  # now add smoothers per species and colour them
+  layer_smooths(span = input_slider(0.5, 1, 0.5,
+                                    label = 'Species Models'),
+                fill = ~Species, se=TRUE) %>%
+  # add new labels
   add_axis("x", title = "Sepal Width") %>%
   add_axis("y", title = "Sepal Length") %>%
-  bind_shiny("ggvis", "ggvis_ui"
-             )
+  # finally declare as shiny object
+  bind_shiny("ggvis", "ggvis_ui")
 ```
